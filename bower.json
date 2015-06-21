@@ -1,0 +1,29 @@
+{
+  "name": "RecipeSearch",
+  "version": "0.0.1",
+  "homepage": "https://github.com/sepal/RecipeSearch",
+  "authors": [
+    "Sebastian <sep.gil@gmail.com>"
+  ],
+  "description": "A sample project to learn RxJS, React and ElasticSearch",
+  "main": "app.js",
+  "moduleType": [
+    "es6"
+  ],
+  "private": true,
+  "license": "GPLv2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/sass/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "inuit-normalize": "~3.0.3",
+    "inuit-reset": "~0.1.1",
+    "inuit-box-sizing": "~0.2.0",
+    "font-awesome": "~4.3.0"
+  }
+}

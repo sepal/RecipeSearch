@@ -4,25 +4,49 @@
   "description": "A sample project to learn RxJS, React and ElasticSearch",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-js": "browserify public/src/js/app.js -o public/dist/js/app.js",
+    "build-min-js": "browserify public/src/js/app.js | uglifyjs -o public/dist/js/app.js",
+    "watch-js": "nodemon -e js -w public/src/js -x 'npm run build-js'",
+    "build-sass": "node-sass public/src/sass/styles.scss public/dist/css/styles.css",
+    "build-min-sass": "node-sass public/src/sass/styles.scss | cleancss -o public/dist/css/styles.css",
+    "watch-sass": "nodemon -e scss -w public/src/sass -x 'npm run build-sass'",
+    "build": "npm run build-js & npm run build-sass",
+    "watch": "npm run watch-js & npm run watch-sass",
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install"
+  },
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/sepal/RecipeSearch/issues"
+  },
+  "homepage": "https://github.com/sepal/RecipeSearch",
+  "devDependencies": {
+    "autoprefixer": "^5.2.0",
+    "bower": "^1.4.1",
+    "browserify": "^10.2.4",
+    "clean-css": "^3.3.3",
+    "node-sass": "^3.2.0",
+    "uglifyjs": "^2.4.10"
+  },
+  "dependencies": {
+    "babelify": "^6.1.2",
+    "body-parser": "^1.13.1",
+    "express": "^4.13.0",
+    "handlebars": "^3.0.3",
+    "react": "^0.13.3",
+    "rx": "^2.5.3",
+    "winston": "^1.0.0"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/sepal/RecipeSearch.git"
   },
-  "keywords": [
-    "RxJS",
-    "React",
-    "ElasticSearch",
-    "cooking",
-    "recipe",
-    "search"
-  ],
   "author": "Sebastian Gilits <sep.gil@gmail.com>",
-  "license": "GPLv2",
-  "private": true,
-  "bugs": {
-    "url": "https://github.com/sepal/RecipeSearch/issues"
-  },
-  "homepage": "https://github.com/sepal/RecipeSearch"
+  "license": "GPLv2"
 }
