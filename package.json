@@ -1,0 +1,28 @@
+{
+  "name": "RecipeSearch",
+  "version": "0.0.1",
+  "description": "A sample project to learn RxJS, React and ElasticSearch",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sepal/RecipeSearch.git"
+  },
+  "keywords": [
+    "RxJS",
+    "React",
+    "ElasticSearch",
+    "cooking",
+    "recipe",
+    "search"
+  ],
+  "author": "Sebastian Gilits <sep.gil@gmail.com>",
+  "license": "GPLv2",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/sepal/RecipeSearch/issues"
+  },
+  "homepage": "https://github.com/sepal/RecipeSearch"
+}
