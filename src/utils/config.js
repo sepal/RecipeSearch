@@ -18,6 +18,9 @@ var defaultConfig = {
   log: {
     file: './server.log',
     level: 'info'
+  },
+  elasticSearch: {
+    host: 'localhost:9200'
   }
 };
 
@@ -36,3 +39,4 @@ nconf.defaults(defaultConfig);
 // Export the config.
 exports.port = nconf.get('port');
 exports.log = nconf.get('log');
+exports.elasticSearch = nconf.get('elasticSearch')
