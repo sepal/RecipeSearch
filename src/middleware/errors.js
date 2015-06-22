@@ -1,5 +1,5 @@
-var util = require('util');
-var logger = require('../utils/logger');
+import util from 'util';
+import logger from '../utils/logger';
 
 function errors(err, req, res, next) {
   function includeStack(stack) {

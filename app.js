@@ -1,11 +1,11 @@
 #!/usr/bin/env babel-node
 
-var express = require('express');
-var bodyParser = require('body-parser');
+import express from 'express';
+import bodyParser from 'body-parser';
 
-var middleware = require('./src/middleware');
-var config = require('./src/utils/config');
-var logger = require('./src/utils/logger');
+import middleware from './src/middleware';
+import config from './src/utils/config';
+import logger from './src/utils/logger';
 
 var app = express();
 app.use(bodyParser.json());

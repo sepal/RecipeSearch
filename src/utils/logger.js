@@ -1,5 +1,5 @@
-var winston = require("winston");
-var config = require("./config");
+import winston from 'winston';
+import config from './config';
 
 var logger = new (winston.Logger)({
   transports: [
