@@ -13,7 +13,7 @@
     "build": "npm run build-js & npm run build-sass",
     "watch": "npm run watch-js & npm run watch-sass",
     "start": "./node_modules/.bin/babel-node ./app.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --compilers js:babel/register",
     "postinstall": "bower install"
   },
   "private": true,
@@ -26,6 +26,7 @@
     "bower": "^1.4.1",
     "browserify": "^10.2.4",
     "clean-css": "^3.3.3",
+    "mocha": "^2.2.5",
     "node-sass": "^3.2.0",
     "uglifyjs": "^2.4.10"
   },
