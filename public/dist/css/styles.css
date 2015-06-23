@@ -2404,19 +2404,18 @@ header {
   background: white; }
   @media (min-width: 800px) {
     header .page-title {
-      width: 16.66667%;
+      width: 15.25424%;
       float: left;
       margin-right: -100%;
-      clear: none;
-      padding-right: 0.375rem; } }
+      margin-left: 0;
+      clear: none; } }
   @media (min-width: 800px) {
     header .search {
-      width: 50%;
+      width: 49.15254%;
       float: left;
       margin-right: -100%;
-      margin-left: 16.66667%;
-      clear: none;
-      padding-right: 0.375rem; } }
+      margin-left: 16.94915%;
+      clear: none; } }
   header .search .text--search {
     width: 75%;
     border-top-right-radius: 0;
@@ -2429,6 +2428,93 @@ body {
   background: #f0f0f0; }
 
 .l-content > .container {
-  background: white;
   padding-top: 0.8rem;
   padding-bottom: 0.8rem; }
+
+.list .row {
+  background: white;
+  border: 1px solid #cccccc;
+  padding: 0.76875rem; }
+  .list .row:nth-child(1n+1) {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    clear: both; }
+  .list .row:nth-child(n) {
+    margin-top: 0; }
+  .list .row:nth-child(n+2) {
+    margin-top: 1.6rem; }
+  @media (min-width: 800px) {
+    .list .row:nth-child(2n+1) {
+      width: 49.15254%;
+      float: left;
+      margin-right: -100%;
+      margin-left: 0;
+      clear: none;
+      clear: both; }
+    .list .row:nth-child(2n+2) {
+      width: 49.15254%;
+      float: right;
+      margin-left: 0;
+      margin-right: 0;
+      clear: none; }
+    .list .row:nth-child(n) {
+      margin-top: 0; }
+    .list .row:nth-child(n+3) {
+      margin-top: 1.6rem; } }
+  @media (min-width: 1025px) {
+    .list .row:nth-child(3n+1) {
+      width: 32.20339%;
+      float: left;
+      margin-right: -100%;
+      margin-left: 0;
+      clear: none;
+      clear: both; }
+    .list .row:nth-child(3n+2) {
+      width: 32.20339%;
+      float: left;
+      margin-right: -100%;
+      margin-left: 33.89831%;
+      clear: none; }
+    .list .row:nth-child(3n+3) {
+      width: 32.20339%;
+      float: right;
+      margin-left: 0;
+      margin-right: 0;
+      clear: none; }
+    .list .row:nth-child(n) {
+      margin-top: 0; }
+    .list .row:nth-child(n+4) {
+      margin-top: 1.6rem; } }
+  @media (min-width: 1200px) {
+    .list .row:nth-child(4n+1) {
+      width: 23.72881%;
+      float: left;
+      margin-right: -100%;
+      margin-left: 0;
+      clear: none;
+      clear: both; }
+    .list .row:nth-child(4n+2) {
+      width: 23.72881%;
+      float: left;
+      margin-right: -100%;
+      margin-left: 25.42373%;
+      clear: none; }
+    .list .row:nth-child(4n+3) {
+      width: 23.72881%;
+      float: left;
+      margin-right: -100%;
+      margin-left: 50.84746%;
+      clear: none; }
+    .list .row:nth-child(4n+4) {
+      width: 23.72881%;
+      float: right;
+      margin-left: 0;
+      margin-right: 0;
+      clear: none; }
+    .list .row:nth-child(n) {
+      margin-top: 0; }
+    .list .row:nth-child(n+5) {
+      margin-top: 1.6rem; } }

@@ -4,9 +4,9 @@ class RecipeTeaser extends React.Component {
   render() {
     return (
       <div className="recipe recipe--teaser">
-        <h2 className="recipe__name">
+        <h4 className="recipe__name">
           <a href={this.props.url}>{this.props.name}</a>
-        </h2>
+        </h4>
         <div className="recipe__source">
           As found on <a href={this.props.source_url} target="_blank">{this.props.source}</a>
         </div>

@@ -1,0 +1,20 @@
+.list {
+  .row {
+    @include listening--columns(1);
+
+    @include breakpoint($breakpoint--narrow) {
+      @include listening--columns(2);
+    }
+
+    @include breakpoint($breakpoint--medium) {
+      @include listening--columns(3);
+    }
+
+    @include breakpoint($breakpoint--wide) {
+      @include listening--columns(4);
+    }
+
+    background: white;
+    @include adjust-borders(1px solid $grey--light, 0.5);
+  }
+}

@@ -5,8 +5,15 @@ import RecipeTeaser from './RecipeTeaser';
 class RecipeList extends React.Component {
   render() {
     var recipes = [];
-    _.forEach(this.props.recipes, (recipe) => {
-      recipes.push(<RecipeTeaser {...recipe} key={recipe.id} />);
+    _.forEach(this.props.recipes, (recipe, key) => {
+      let className = "row ";
+      className += key % 2 == 0 ? "row--even" : "row--odd";
+
+      recipes.push(
+        <div className = {className}>
+          <RecipeTeaser {...recipe} key={recipe.id} />
+        </div>
+      );
     });
     return (
       <div className="list list--recipes">
