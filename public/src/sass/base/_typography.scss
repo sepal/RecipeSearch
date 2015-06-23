@@ -1,0 +1,38 @@
+a {
+  border: none;
+  text-decoration: none;
+  color: $color--link;
+
+  @include link--active {
+    color: lighten($color--link, $lighten--active);
+    outline: none;
+  }
+}
+
+*:focus {
+  outline: none;
+}
+
+h1 {
+  @include adjust-font-size($heading-size-1);
+}
+
+h2 {
+  @include adjust-font-size($heading-size-2);
+}
+
+h3 {
+  @include adjust-font-size($heading-size-3);
+}
+
+h4 {
+  @include adjust-font-size($heading-size-4);
+}
+
+h5 {
+  @include adjust-font-size($heading-size-5);
+}
+
+h6 {
+  @include adjust-font-size($heading-size-6);
+}

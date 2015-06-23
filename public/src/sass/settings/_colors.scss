@@ -1,0 +1,16 @@
+$grey:              #666;
+
+$grey--dark:        darken($grey, 20%);
+$grey--light:       lighten($grey, 40%);
+$grey--very-light:  lighten($grey, 54%);
+
+$color--success:    #5cb85c;
+$color--info:       #5bc0de;
+$color--warning:    #f0ad4e;
+$color--danger:     #d9534f;
+
+$color--primary:    $color--success;
+$color--secondary:  $grey--light;
+$color--link:       $color--primary;
+
+$lighten--active:   5%;

@@ -1,0 +1,13 @@
+@include add-grid($grids);
+@include add-gutter($grids__gutter);
+
+// Be sure to enable debug mode for your grid visualization so show up:
+@include sgs-change('debug', $grids--debug);
+
+
+.container {
+  max-width: $page--width;
+  margin: 0 auto;
+  padding: 0 10px;
+  @include background-grid($color: $grids--debug-color);
+}
