@@ -20,7 +20,8 @@ var defaultConfig = {
     level: 'info'
   },
   elasticSearch: {
-    host: 'localhost:9200'
+    host: 'localhost:9200',
+    log: ['error', 'warning']
   }
 };
 
