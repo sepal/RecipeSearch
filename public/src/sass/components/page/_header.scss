@@ -4,7 +4,8 @@
 }
 
 header {
-  @extend %clearfix;
+  @extend .clearfix;
+  background: white;
 
   .page-title {
     @include breakpoint($breakpoint--narrow) {

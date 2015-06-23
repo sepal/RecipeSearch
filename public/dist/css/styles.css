@@ -2339,7 +2339,7 @@ header:after {
     background: #d9d9d9;
     border-color: #cccccc; }
 
-.container, .l-main {
+.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px; }
@@ -2400,28 +2400,35 @@ h6 {
   font-size: 0.75rem;
   line-height: 1.6rem; }
 
-@media (min-width: 800px) {
-  header .page-title {
-    width: 16.66667%;
-    float: left;
-    margin-right: -100%;
-    clear: none;
-    padding-right: 0.375rem; } }
+header {
+  background: white; }
+  @media (min-width: 800px) {
+    header .page-title {
+      width: 16.66667%;
+      float: left;
+      margin-right: -100%;
+      clear: none;
+      padding-right: 0.375rem; } }
+  @media (min-width: 800px) {
+    header .search {
+      width: 50%;
+      float: left;
+      margin-right: -100%;
+      margin-left: 16.66667%;
+      clear: none;
+      padding-right: 0.375rem; } }
+  header .search .text--search {
+    width: 75%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
+  header .search .submit {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
 
-@media (min-width: 800px) {
-  header .search {
-    width: 50%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 16.66667%;
-    clear: none;
-    padding-right: 0.375rem; } }
+body {
+  background: #f0f0f0; }
 
-header .search .text--search {
-  width: 75%;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0; }
-
-header .search .submit {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0; }
+.l-content > .container {
+  background: white;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem; }
