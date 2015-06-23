@@ -18,3 +18,7 @@
     @include adjust-borders(1px solid $grey--light, 0.5);
   }
 }
+
+.empty--list {
+  text-align: center;
+}

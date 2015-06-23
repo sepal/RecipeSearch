@@ -15,6 +15,14 @@ class RecipeList extends React.Component {
         </div>
       );
     });
+
+    if (recipes.length == 0) {
+      recipes =
+        <div className="empty empty--list">
+          <h2>Sorry, no recipes found!</h2>
+        </div>;
+    }
+
     return (
       <div className="list list--recipes">
         {recipes}
