@@ -7,14 +7,27 @@ import Recipes from '../components/Recipes'
 
 
 module.exports = (req, res) => {
+  var query = {
+    match_all: {}
+  };
+
+  if (req.query.search) {
+    query = {
+      query_string: {
+        query: req.query.search
+      }
+    };
+  }
 
   searchService.client.search({
     index: 'recipes',
     type: 'recipe',
     body: {
-      "fields": ["id", "name", "source", "url", "datePublished"],
+      fields: ["id", "name", "source", "url", "datePublished"],
       query: {
-        "match_all": {}
+        filtered: {
+          query: query
+        }
       }
     }
   }).then((result) => {
@@ -35,14 +48,20 @@ module.exports = (req, res) => {
       return obj;
     }));
   }).then((recipeArray) => {
-    var element = React.createElement(Recipes, {recipes: recipeArray});
+    var state = {
+      recipes: recipeArray,
+      query: {
+        search: req.query.search,
+        target: '/'
+      }
+    };
+
+    var element = React.createElement(Recipes, state);
     var markup = React.renderToString(element);
-    var state = {recipes: []};
 
     res.render('home', {
       markup: markup,
       state: JSON.stringify(state)
     });
   });
-
 };
