@@ -1,3 +1,31 @@
 .page-title {
   @extend h2;
+  @extend %form-element--no-border;
+}
+
+header {
+  @extend %clearfix;
+
+  .page-title {
+    @include breakpoint($breakpoint--narrow) {
+      @include grid-span(2, 1);
+    }
+  }
+
+  .search {
+    @include breakpoint($breakpoint--narrow) {
+      @include grid-span(6, 3);
+    }
+
+    .text--search {
+      width: 75%;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .submit {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
 }

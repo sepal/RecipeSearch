@@ -1,0 +1,42 @@
+@mixin form($border-width) {
+  height: rhythm(1.25);
+  border: $border-width solid $grey--light;
+  margin: rhythm(0.375, $border-width) 0;
+}
+
+%form-element {
+  @include form(1px);
+  padding: 0 0.5rem;
+  border-radius: 0.3rem;
+}
+
+%form-element--no-border {
+  @include form(0px);
+  border-radius: 3px;
+}
+
+@mixin button__color($text-color, $color) {
+  color: $text-color;
+  background: $color;
+  border-color: darken($color, 5%);
+
+  @include active {
+    background: lighten($color, $lighten--active);
+    border-color: darken(lighten($color, $lighten--active), 5%);
+  }
+}
+
+.button {
+  @extend %form-element;
+}
+
+.button--primary {
+  @extend .button;
+  @include button__color(white, $color--primary);
+}
+
+.button--default {
+  @extend .button;
+  @include button__color($color--text, $color--secondary);
+}
+

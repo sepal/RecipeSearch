@@ -1,4 +1,4 @@
-@mixin link--active {
+@mixin active {
   &:hover, &:active, &:focus {
     @content
   }

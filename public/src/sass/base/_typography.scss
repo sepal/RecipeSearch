@@ -3,7 +3,7 @@ a {
   text-decoration: none;
   color: $color--link;
 
-  @include link--active {
+  @include active {
     color: lighten($color--link, $lighten--active);
     outline: none;
   }

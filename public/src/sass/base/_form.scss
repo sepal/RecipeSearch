@@ -1,5 +1,11 @@
 input {
-  height: rhythm(1.25);
-  border: 1px solid $grey;
-  margin: rhythm(0.375, 1px) 0;
+  @extend %form-element;
+}
+
+input[type=text] {
+
+}
+
+input[type=submit] {
+  @extend .button--primary;
 }
