@@ -20,6 +20,10 @@ $fa-font-path: "vendor/font-awesome/fonts";
 @import "abstractions/layout";
 @import "abstractions/listening";
 
+@import "base/form";
 @import "base/lists";
 @import "base/page";
 @import "base/typography";
+
+@import "components/page/header";
+@import "components/page/page";

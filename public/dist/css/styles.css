@@ -360,7 +360,7 @@ th {
  * margins from certain elements.
  */
 body,
-h1, h2, h3, h4, h5, h6,
+h1, h2, .page-title, h3, h4, h5, h6,
 p, blockquote, pre,
 dl, dd, ol, ul,
 form, fieldset, legend,
@@ -2309,10 +2309,15 @@ html {
   display: table;
   clear: both; }
 
-.container {
+.container, .l-main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px; }
+
+input {
+  height: 2rem;
+  border: 1px solid #666;
+  margin: 0.57656rem 0; }
 
 .list--blank {
   padding: 0; }
@@ -2328,11 +2333,8 @@ body, html {
 
 body {
   font-family: "Lato", sans-serif;
-  font-size: 14px;
-  line-height: 21px; }
-
-.container {
-  height: 100%; }
+  font-size: 16px;
+  line-height: 25.6px; }
 
 a {
   border: none;
@@ -2347,24 +2349,28 @@ a {
 
 h1 {
   font-size: 2rem;
-  line-height: 3rem; }
+  line-height: 3.2rem; }
 
-h2 {
+h2, .page-title {
   font-size: 1.5rem;
-  line-height: 1.5rem; }
+  line-height: 1.6rem; }
 
 h3 {
   font-size: 1.2rem;
-  line-height: 1.5rem; }
+  line-height: 1.6rem; }
 
 h4 {
   font-size: 1.1rem;
-  line-height: 1.5rem; }
+  line-height: 1.6rem; }
 
 h5 {
   font-size: 1rem;
-  line-height: 1.5rem; }
+  line-height: 1.6rem; }
 
 h6 {
   font-size: 0.9rem;
-  line-height: 1.5rem; }
+  line-height: 1.6rem; }
+
+.text--small {
+  font-size: 0.75rem;
+  line-height: 1.6rem; }

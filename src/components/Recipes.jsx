@@ -7,7 +7,6 @@ class Recipes extends React.Component {
   render() {
     return (
       <div className="recipes">
-        <RecipeSearch {...this.props.query} />
         <RecipeList recipes={this.props.recipes} />
         </div>
     );

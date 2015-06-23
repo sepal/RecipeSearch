@@ -36,3 +36,7 @@ h5 {
 h6 {
   @include adjust-font-size($heading-size-6);
 }
+
+.text--small {
+  @include adjust-font-size(0.75rem);
+}

@@ -4,6 +4,7 @@ import _ from 'lodash';
 import logger from '../utils/logger'
 import searchService from '../utils/searchService'
 import Recipes from '../components/Recipes'
+import RecipesSearch from '../components/recipe/RecipeSearch.jsx'
 
 
 module.exports = (req, res) => {
@@ -49,18 +50,24 @@ module.exports = (req, res) => {
     }));
   }).then((recipeArray) => {
     var state = {
-      recipes: recipeArray,
-      query: {
+      recipes: {
+        recipes: recipeArray
+      },
+      recipeSearch: {
         search: req.query.search,
         target: '/'
       }
     };
 
-    var element = React.createElement(Recipes, state);
-    var markup = React.renderToString(element);
+    var headerElement = <RecipesSearch {...state.recipeSearch} />;
+    var headerMarkup = React.renderToString(headerElement);
+
+    var bodyElemet = <Recipes {...state.recipes} />;
+    var bodyMarkup = React.renderToString(bodyElemet);
 
     res.render('home', {
-      markup: markup,
+      header_markup: headerMarkup,
+      markup_body: bodyMarkup,
       state: JSON.stringify(state)
     });
   });
