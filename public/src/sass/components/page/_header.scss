@@ -14,12 +14,13 @@ header {
   }
 
   .search {
+    text-align: center;
+
     @include breakpoint($breakpoint--narrow) {
-      @include grid-span(6, 3);
+      @include grid-span(8, 3);
     }
 
     .text--search {
-      width: 75%;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }

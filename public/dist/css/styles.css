@@ -2409,20 +2409,21 @@ header {
       margin-right: -100%;
       margin-left: 0;
       clear: none; } }
-  @media (min-width: 800px) {
-    header .search {
-      width: 49.15254%;
-      float: left;
-      margin-right: -100%;
-      margin-left: 16.94915%;
-      clear: none; } }
-  header .search .text--search {
-    width: 75%;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0; }
-  header .search .submit {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0; }
+  header .search {
+    text-align: center; }
+    @media (min-width: 800px) {
+      header .search {
+        width: 66.10169%;
+        float: left;
+        margin-right: -100%;
+        margin-left: 16.94915%;
+        clear: none; } }
+    header .search .text--search {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
+    header .search .submit {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0; }
 
 body {
   background: #f0f0f0; }
