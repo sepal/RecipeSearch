@@ -10,7 +10,7 @@ header {
 
   .page-title {
     @include breakpoint($breakpoint--narrow) {
-      @include grid-span(2, 1);
+      @include grid-span(3, 1);
     }
   }
 
@@ -18,17 +18,35 @@ header {
     text-align: center;
 
     @include breakpoint($breakpoint--narrow) {
-      @include grid-span(8, 3);
+      @include grid-span(6, 4);
     }
 
     .text--search {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+      width: 100%;
     }
 
-    .submit {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+    .text--search, .submit {
+      display: block;
+      margin: rhythm(1) auto
+    }
+
+
+    @include breakpoint($breakpoint--small) {
+      .text--search, .submit {
+        display: inline-block;
+        margin: rhythm(0.375, 1px) 0;
+      }
+
+      .text--search {
+        width: 75%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      .submit {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
     }
   }
 }
