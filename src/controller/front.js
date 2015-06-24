@@ -29,7 +29,8 @@ module.exports = (req, res) => {
         filtered: {
           query: query
         }
-      }
+      },
+      size: 40
     }
   }).then((result) => {
     return Promise.all(result.hits.hits.map((hit) => {

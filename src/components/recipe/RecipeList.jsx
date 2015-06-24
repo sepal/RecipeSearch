@@ -5,6 +5,8 @@ import RecipeTeaser from './RecipeTeaser';
 class RecipeList extends React.Component {
   render() {
     var recipes = [];
+    var classNames = ["list list--recipe"];
+
     _.forEach(this.props.recipes, (recipe, key) => {
       let className = "row ";
       className += key % 2 == 0 ? "row--even" : "row--odd";
@@ -16,15 +18,14 @@ class RecipeList extends React.Component {
       );
     });
 
+
     if (recipes.length == 0) {
-      recipes =
-        <div className="empty empty--list">
-          <h2>Sorry, no recipes found!</h2>
-        </div>;
+      recipes = <h2>Sorry, no recipes found!</h2>;
+      classNames.push("list--empty");
     }
 
     return (
-      <div className="list list--recipes">
+      <div className={classNames.join(' ')}>
         {recipes}
       </div>
     )

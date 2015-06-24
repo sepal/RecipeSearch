@@ -3,18 +3,26 @@
 
   columns: 1;
 
-  @include breakpoint($breakpoint--narrow) {
+  @include breakpoint($breakpoint--small) {
     columns: 2;
+  }
+
+  @include breakpoint($breakpoint--narrow) {
+    columns: 3;
   }
 
   @include breakpoint($breakpoint--medium) {
     columns: 4;
   }
 
+  &.list--empty {
+    columns: 1;
+  }
+
   column-gap: 1em;
 
   .row {
-    column-break-inside: avoid;
+    break-inside: avoid;
     margin-bottom: rhythm(1);
 
     @include adjust-borders(1px solid $grey--light, 0.5);
@@ -25,6 +33,6 @@
   }
 }
 
-.empty--list {
+.list--empty {
   text-align: center;
 }
