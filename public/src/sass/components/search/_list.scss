@@ -1,23 +1,23 @@
 .list {
+  columns: 1;
+
+  @include breakpoint($breakpoint--narrow) {
+    columns: 2;
+  }
+
+  @include breakpoint($breakpoint--medium) {
+    columns: 4;
+  }
+
+  column-gap: 1em;
+
   .row {
-    border-radius: 0.3em;
-
-    @include listening--columns(1);
-
-    @include breakpoint($breakpoint--narrow) {
-      @include listening--columns(2);
-    }
-
-    @include breakpoint($breakpoint--medium) {
-      @include listening--columns(3);
-    }
-
-    @include breakpoint($breakpoint--wide) {
-      @include listening--columns(4);
-    }
+    column-break-inside: avoid;
+    margin-bottom: rhythm(1);
 
     background: white;
     @include adjust-borders(1px solid $grey--light, 0.5);
+    border-radius: 0.3em;
   }
 }
 
