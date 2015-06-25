@@ -1,3 +1,0 @@
-elasticSearch:
-  host: 192.168.99.100:32769
-  log: 'trace'

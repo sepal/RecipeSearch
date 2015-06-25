@@ -28,3 +28,6 @@ node_modules
 
 # Ignore bower scss files
 public/src/sass/vendor
+
+# Ignore config file
+config.yml
