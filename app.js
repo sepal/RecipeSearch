@@ -8,7 +8,7 @@ import config from './src/utils/config';
 import logger from './src/utils/logger';
 import middleware from './src/middleware';
 
-import searchService from './src/utils/searchService'
+import searchService from './src/utils/searchService';
 
 var app = express();
 app.engine('.hbs', handlebars({defaultLayout: 'main', extname: '.hbs'}));

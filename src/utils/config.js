@@ -19,6 +19,11 @@ var defaultConfig = {
     file: './server.log',
     level: 'info'
   },
+  database: {
+    host: '192.168.99.100',
+    port: 32783,
+    db: 'RecipeSearch'
+  },
   elasticSearch: {
     host: 'localhost:9200',
     log: ['error', 'warning']
@@ -40,4 +45,5 @@ nconf.defaults(defaultConfig);
 // Export the config.
 exports.port = nconf.get('port');
 exports.log = nconf.get('log');
-exports.elasticSearch = nconf.get('elasticSearch')
+exports.elasticSearch = nconf.get('elasticSearch');
+exports.database = nconf.get('database');
