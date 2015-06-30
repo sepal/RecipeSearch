@@ -20,9 +20,7 @@ var defaultConfig = {
     level: 'info'
   },
   database: {
-    host: '192.168.99.100',
-    port: 32783,
-    db: 'RecipeSearch'
+    url: 'mongodb://localhost/recipeSearch'
   },
   elasticSearch: {
     host: 'localhost:9200',
