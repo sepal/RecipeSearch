@@ -23,8 +23,8 @@ recipeSchema.post('save', (doc) => {
   });
 
   search.index({
-    index: 'recipe',
-    type: doc.type,
+    index: 'recipe_search',
+    type: 'recipe',
     id: doc.id,
     body: {
       id: doc.id,
