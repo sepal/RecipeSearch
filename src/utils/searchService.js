@@ -8,4 +8,4 @@ var client = new elasticsearch.Client({
   log: config.elasticSearch.log
 });
 
-exports.client = client;
+module.exports = client;

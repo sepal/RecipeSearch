@@ -14,7 +14,7 @@ if (database.user && database.password) {
 
 mongoose.connect(database.url, options);
 
-db = mongoose.connection;
+var db = mongoose.connection;
 
 db.on('error', () => {
   logger.error('Error while trying to connect to the database.');

@@ -8,8 +8,9 @@ import config from './src/utils/config';
 import logger from './src/utils/logger';
 import middleware from './src/middleware';
 import database from './src/utils/database';
+import Recipe from './src/models/Recipe';
 
-/*
+
 import searchService from './src/utils/searchService';
 
 var app = express();
@@ -23,4 +24,4 @@ app.use(middleware.errors());
 
 app.listen(config.port, function () {
   logger.info('App listening on port ' + config.port);
-});*/
+});
