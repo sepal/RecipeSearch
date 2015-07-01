@@ -8,7 +8,7 @@ class RecipeTeaser extends React.Component {
           <a href={this.props.url}>{this.props.name}</a>
         </h4>
         <div className="recipe__source">
-          As found on <a href={this.props.source_url} target="_blank">{this.props.source}</a>
+          {this.props.author}
         </div>
       </div>
     )

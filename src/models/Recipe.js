@@ -6,7 +6,7 @@ import search from '../utils/searchService';
 var ingredientSchema = mongoose.Schema({
   name: String,
   amount: Number,
-  unit: String,
+  unit: String
 });
 
 var recipeSchema = mongoose.Schema({
@@ -16,6 +16,45 @@ var recipeSchema = mongoose.Schema({
   method: String,
   ingredients: [ingredientSchema]
 });
+
+recipeSchema.statics.search = function(searchString) {
+  var query = {
+    match_all: {}
+  };
+
+  if (searchString) {
+    query = {
+      query_string: {
+        query: searchString
+      }
+    };
+  }
+
+  return search.search({
+    index: 'recipe_search',
+    type: 'recipe',
+    body: {
+      fields: ["id", "name", "author", "type"],
+      query: {
+        filtered: {
+          query: query
+        }
+      },
+      size: 40
+    }
+  }).then((result) => {
+    return Promise.all(result.hits.hits.map((hit) => {
+      let obj = {
+        id: hit.fields.id.pop(),
+        name: hit.fields.name.pop(),
+        author: hit.fields.author.pop(),
+        type: hit.fields.type.pop()
+      };
+
+      return obj;
+    }));
+  });
+};
 
 recipeSchema.post('save', (doc) => {
   let ingredients = _.map(doc.ingredients, (ingredient) => {
